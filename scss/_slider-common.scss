@@ -1,0 +1,275 @@
+/*----------------------- common styles for all sliders -----------------------*/
+.slider-simple,
+.slider-with-thumbs,
+.slider-panoramic {
+  position: relative;
+}
+.slide-container {
+  .slide img{
+    max-width: 100%;
+    display: block;
+    opacity: 0;
+    margin: 0 auto;
+  }
+}
+.bx-wrapper {
+  position: relative;
+  padding: 0;
+  *zoom: 1;
+
+  .bx-controls-auto, .bx-pager{
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+  }
+  /* LOADER */
+  .bx-loading {
+    min-height: 50px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+  }
+  /* PAGER */
+  .bx-pager {
+    text-align: center;
+    font-size: .85em;
+    font-family: Arial;
+    font-weight: bold;
+    color: #666;
+    padding-top: 20px;
+
+  }
+  .bx-pager-item,
+  .bx-controls-auto-item{
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+  }
+
+  .bx-pager.bx-default-pager a{
+    background: #666;
+    text-indent: -9999px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    outline: 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
+  .bx-pager.bx-default-pager a:hover,
+  .bx-pager.bx-default-pager a.active { background: #000; }
+
+  /* DIRECTION CONTROLS (NEXT / PREV) */
+  .bx-controls-direction a{
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    outline: 0;
+    width: 32px;
+    height: 32px;
+    text-indent: -9999px;
+    z-index: 990;
+    background-color: #333;
+    background-repeat:  no-repeat;
+    background-image: url('../img/slider_icons.svg');
+    .ie8 &{
+      background: #333 url('../img/slider_icons.png') no-repeat;
+      &.bx-prev{
+        background-position: -36px -24px;
+      }
+      &.bx-next{
+
+        background-position: 7px -23px;
+      }
+    }
+
+  }
+  .bx-controls-direction a.disabled {
+    display: none;
+  }
+
+  .bx-prev {
+    left: 0px;
+    background-position: -48px -38px;
+  }
+  .bx-next {
+    right: 0px;
+    background-position: -5px -38px;
+  }
+  /* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+  .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+    text-align: left;
+    width: 80%;
+  }
+  .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+    right: 0;
+    width: 35px;
+  }
+  /* COPYRIGHT INFO */
+  .copyright {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 24px;
+    height: 24px;
+    background: transparent url('../img/copyrights_icon.png')  no-repeat;
+    background-size: 100%;
+    .ie8 &{
+      background: transparent url('../img/slider_icons.png')  no-repeat;
+      background-position: 0 -56px;
+    }
+
+
+
+
+    p {
+      width: 265px;
+      padding: 10px;
+      background: #fff;
+      position: absolute;
+      bottom: 35px;
+      border: 1px solid #c7c7c7;
+      z-index:1;
+      right: -5px;
+      display: none;
+
+
+      &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 11px solid transparent;
+        border-right: 11px solid transparent;
+        border-top: 11px solid #c7c7c7;
+        position: absolute;
+        bottom: -11px;
+        right: 7px;
+        margin-left: -5px;
+
+      }
+
+      &:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #fff;
+        position: absolute;
+        bottom: -10px;
+        right: 7px;
+        margin-left: -5px;
+      }
+    }
+
+    &:hover p {
+      display: block;
+    }
+
+  }
+}
+/*PRELOADER*/
+.slider-preloader{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: #fff;
+  display: block;
+  background: #fff url("../img/preloader.gif") center no-repeat;
+}
+/*-------------------- desktop & tablet styles --------------------*/
+@include media-query(lap-and-up) {
+  .bx-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  background-color: rgba(202, 1, 108, 0.8);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCCA016C,endColorstr=#CCCA016C)"; /* IE8 */
+  padding: 15px;
+  color: #fff;
+  h1{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 24px;
+    word-wrap: break-word;
+  }
+  p { color: #fff; }}
+
+}
+
+
+/*-------------------- mobile styles --------------------*/
+@include media-query(palm) {
+  .bx-wrapper{
+   .slide:after,
+   .bx-caption {
+    background-color: #ca016c;
+  }
+    .copyright p{
+      padding-right: 50px;
+      width: 190px;
+    }
+  }
+  .bx-caption{
+  display: block;
+  width: 100%;
+  clear: both;
+  max-height: 30px;
+  overflow: hidden;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+    padding: 0;
+    h1{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 30px;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 10px;
+    font-family: Arial, no-serif;
+    }
+
+
+  p{
+    display: none;
+  }
+  }
+
+
+  .bx-viewport:after, .bx-viewport:before { display: none; }
+
+  .no-title .bx-wrapper .bx-controls-direction a {
+    top: 50%;
+    margin-top: -16px;
+  }
+  .no-title .slide:after, .no-title .fluid-width-video-wrapper:after {
+    display: none;
+  }
+  .slide-container .slide .bx-caption + .copyright {
+    bottom: 30px;
+  }
+  .slide-container .slide .bx-caption.hidden + .copyright {
+    bottom: 0;
+  }
+
+
+
+}
+
+
+
+
+

@@ -1,0 +1,21 @@
+/**
+ * Styles for different slider types.
+ * Set to `true` or `false`.
+ * Use 'true' for type which is used.
+ *
+ */
+$slider-panoramic:     true!default;
+$slider-simple:        true!default;
+$slider-with-thumbs:   true!default;
+
+
+/**
+ * When none of the slider images has the caption the caption bar will be not visible and controls (next/prev) will be placed in the middle of slider container.
+ */
+
+/**
+ * Variables setting media-query widths
+ */
+
+$lap-start:         768px!default;
+$desk-start:        1025px!default;

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<!--[if IE 8]><html class="ie8"> <![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta content='width=device-width, initial-scale=1.0' name='viewport' />
+    <!-- slider CSS file -->
+    <link rel="stylesheet" href="css/slider.css" type="text/css">
+
+    <!-- jQuery library  -->
+    <script src="js/jquery.1.8.2.min.js" type="text/javascript"></script>
+    <!-- Media query support for browsers which don't support this property (ex. IE8)-->
+    <script src="js/respond.js" type="text/javascript"></script>
+    <!-- jQuery plugin for fluid width video embeds -->
+    <script src="js/jquery.fitvids.js" type="text/javascript"></script>
+    <!-- jQuery plugin that allow to track clicks on iframes -->
+    <script src="js/jquery.iframeTracker.js" type="text/javascript"></script>
+    <!-- Library to control the Youtube embedded player with JavaScript.-->
+    <script src="js/callPlayerYT.js" type="text/javascript"></script>
+    <!-- Library to control the Vimeo embedded player with JavaScript.-->
+    <script src="js/froogaloop2.min.js" type="text/javascript"></script>
+    <script src="js/helpers.js" type="text/javascript"></script>
+    <!-- bxSlider Javascript file -->
+    <script src="js/jquery.bxslider.js" type="text/javascript"></script>
+    <!-- bxSlider extension Javascript file -->
+    <script src="js/jquery.bxsliderExt.js" type="text/javascript"></script>
+
+    <script src="js/main.js" type="text/javascript"></script>
+    <title>Demo site of slider</title>
+</head>
+<body>
+
+
+<!-- Slider panoramic -->
+<div class="slider-panoramic">
+    <div class="slide-container">
+
+        <div class="slide" data-url="www.google.com" data-target="">
+            <img src="http://placehold.it/980x385&text=FooBar1" data-title="Funky roots">
+           <a class="copyright">
+                <p>The bridge Aamodt Bru<br/>
+                    Photo: Tyler Olson/ScanStockPhoto
+                </p>
+            </a>
+        </div>
+        <div class="slide">
+            <img src="http://placehold.it/980x385&text=FooBar2"  data-content="test test test test test test test">
+            <a class="copyright">
+                <p>The bridge Aamodt Bru<br/>
+                    Photo: Tyler Olson/ScanStockPhoto
+                </p>
+            </a>
+        </div>
+        <div class="slide"><img src="http://placehold.it/980x385&text=FooBar4" data-title="Funky roots4"></div>
+
+        <div class="slide"><img src="http://placehold.it/980x385&text=FooBar4" data-title="Funky roots4"></div>
+        <div class="slide"><iframe width="980" height="385" src="http://player.vimeo.com/video/27855315" frameborder="0" allowfullscreen></iframe></div>
+
+    </div>
+</div>
+
+
+<hr>
+
+
+<!-- Slider with custom pager -->
+<div class="slider-with-thumbs">
+    <div class="slide-container">
+        <div class="slide">
+            <img src="http://placekitten.com/530/350">
+           <a class="copyright">
+                <p>The bridge Aamodt Bru<br/>
+                    Photo: Tyler Olson/ScanStockPhoto
+                </p>
+            </a>
+        </div>
+        <div class="slide"><iframe width="530" height="350" src="//www.youtube.com/embed/B2ZnGVgKcLc" frameborder="0" allowfullscreen></iframe></div>
+        <div class="slide"><img src="http://placehold.it/530x350&text=FooBar2" data-title="Funky roots3" data-content="test test "></div>
+        <div class="slide"><iframe src="http://player.vimeo.com/video/27855315" width="530" height="350" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+        <div class="slide"><img src="http://placehold.it/530x350&text=FooBar5"></div>
+        <div class="slide"><img src="http://placehold.it/530x350&text=FooBar6"></div>
+    </div>
+    <div class="slider-pager">
+        <div class="bx-pg-controls-direction"><a class="bx-pg-prev" href="#">Prev</a><a class="bx-pg-next" href="#">Next</a></div>
+        <div class="pager-overflow">
+            <div class="pager-container">
+                <a class="pager-item" data-slide-index="0" href="#"><img src="http://placehold.it/160x80&text=FooBar1" /></a>
+                <a class="pager-item" data-slide-index="1" href="#">
+                    <img src="http://placehold.it/160x80&text=FooBar2" />
+                    <span class="play-button"></span>
+                </a>
+                <a class="pager-item" data-slide-index="2" href="#"><img src="http://placehold.it/160x80&text=FooBar3" /></a>
+                <a class="pager-item" data-slide-index="3" href="#">
+                    <img src="http://placehold.it/160x80&text=FooBar4" />
+                    <span class="play-button"></span>
+                </a>
+                <a class="pager-item" data-slide-index="4" href="#"><img src="http://placehold.it/160x80&text=FooBar5" /></a>
+                <a class="pager-item" data-slide-index="5" href="#"><img src="http://placehold.it/160x80&text=FooBar6" /></a>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<hr>
+
+
+<!-- Simple slider-->
+<div class="slider-simple">
+    <div class="slide-container">
+        <div class="slide">
+            <img src="http://placekitten.com/530/350" data-title="title" data-content="nextcontent">
+            <a class="copyright">
+                <p>The bridge Aamodt Bru<br/>
+                    Photo: Tyler Olson/ScanStockPhoto
+                </p>
+            </a>
+        </div>
+        <div class="slide">
+            <img src="http://placekitten.com/530/350" data-title="title" data-content="content">
+           <a class="copyright">
+                <p>The bridge Aamodt Bru<br/>
+                    Photo: Tyler Olson/ScanStockPhoto
+                </p>
+            </a>
+        </div>
+        <div class="slide">
+            <img src="http://placekitten.com/530/350" data-title="title" data-content="content">
+            <a class="copyright">
+                <p>The bridge Aamodt Bru<br/>
+                    Photo: Tyler Olson/ScanStockPhoto
+                </p>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>

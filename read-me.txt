@@ -1,0 +1,23 @@
+Slider is based on bxslider
+See http://bxslider.com/
+
+
+For video support:
+If any slides contain video - include jquery.fitvids.js
+See http://fitvidsjs.com/ for more info
+
+
+If any slides contain video from vimeo - include froogaloop library.
+See http://developer.vimeo.com/player/js-api
+
+If any slides contain video from youtube - include callPlayerYT library
+See http://stackoverflow.com/a/7513356/938089
+
+iframeTracker is a jQuery plugin that allow to track clicks on iframes.
+See https://github.com/finalclap/iframeTracker-jquery
+
+
+Media query support:
+To have media queries working correctly in IE8 include respond.js
+See https://github.com/scottjehl/Respond
+
