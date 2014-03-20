@@ -48,7 +48,6 @@
       }
     }
 
-
 }
 
 
@@ -69,6 +68,9 @@
     }
     .bx-caption { display: none; }
   }
+    .slide-container{
+      z-index: -1;
+    }
 }
 
   @include media-query(palm) {
@@ -125,11 +127,11 @@
     left: 50%;
     margin-left: -490px;
     overflow: visible !important;
-    &:before{
+    &:before,
+    &:after{
       width: 100%;
       height: 100%;
       content: "";
-      left: -980px;
       background: rgba(255,255,255, 0.5);
       display: block;
       position: absolute;
@@ -138,17 +140,11 @@
         background: url('../img/ie8_fallback_overlay.png') repeat;
       }
     }
+    &:before{
+      left: -980px;
+    }
     &:after{
-      width: 100%;
-      height: 100%;
-      content: "";
       left: 980px;
-      background: rgba(255,255,255, 0.5);
-      display: block;
-      position: absolute;
-      .ie8 &{
-        background: url('../img/ie8_fallback_overlay.png') repeat;
-      }
     }
 
   }

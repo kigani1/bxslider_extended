@@ -85,7 +85,9 @@
   .slider-with-thumbs {
     display: inline-block;
     vertical-align: top;
-
+  .bx-viewport{
+    z-index: 10;
+  }
     .slide {
       width: 530px !important;
       height: 350px;

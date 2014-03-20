@@ -5,7 +5,7 @@ $(function(){
         mode: 'fade',
         captions: true,
         slideWidth: 530,
-        pagerCustom: '.pager-container',
+        pagerCustom: '.pager-container', // option added in bxsliderExt, create custom pager with thumbnails
         video: true,
         pause: 5000,
 

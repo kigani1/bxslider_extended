@@ -314,7 +314,10 @@ table {
     padding: 20px;
     position: relative; }
   .slider-panoramic .bx-caption {
-    display: none; } }
+    display: none; }
+
+  .slide-container {
+    z-index: -1; } }
 @media (max-width: 767px) {
   .slider-panoramic .bx-wrapper, .slider-panoramic .bx-viewport {
     height: auto; }
@@ -348,27 +351,20 @@ table {
     left: 50%;
     margin-left: -490px;
     overflow: visible !important; }
-    .slider-panoramic .bx-viewport:before {
+    .slider-panoramic .bx-viewport:before, .slider-panoramic .bx-viewport:after {
       width: 100%;
       height: 100%;
       content: "";
-      left: -980px;
       background: rgba(255, 255, 255, 0.5);
       display: block;
       position: absolute;
       z-index: 1; }
-      .ie8 .slider-panoramic .bx-viewport:before {
+      .ie8 .slider-panoramic .bx-viewport:before, .ie8 .slider-panoramic .bx-viewport:after {
         background: url("../img/ie8_fallback_overlay.png") repeat; }
+    .slider-panoramic .bx-viewport:before {
+      left: -980px; }
     .slider-panoramic .bx-viewport:after {
-      width: 100%;
-      height: 100%;
-      content: "";
-      left: 980px;
-      background: rgba(255, 255, 255, 0.5);
-      display: block;
-      position: absolute; }
-      .ie8 .slider-panoramic .bx-viewport:after {
-        background: url("../img/ie8_fallback_overlay.png") repeat; } }
+      left: 980px; } }
 @media (min-width: 768px) and (max-width: 1024px) {
   .slider-panoramic .slide {
     height: auto !important; }
@@ -500,6 +496,8 @@ table {
   .slider-with-thumbs {
     display: inline-block;
     vertical-align: top; }
+    .slider-with-thumbs .bx-viewport {
+      z-index: 10; }
     .slider-with-thumbs .slide {
       width: 530px !important;
       height: 350px;

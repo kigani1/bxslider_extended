@@ -28,7 +28,9 @@
 
 
             //add preloader to slider
-          $(el).append('<div class="slider-preloader"></div>');
+                $(el).append('<div class="slider-preloader"></div>');
+
+
 
 
             slider.settings.onSliderLoad = function (index) {
