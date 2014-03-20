@@ -50,25 +50,6 @@
                         $(tmpCopyright).insertAfter(tmpCaption);
                     }
 
-                    //open link in the new window
-
-//                    if ($(this).attr('data-url') != undefined && $(this).attr('data-url').length != 0) {
-//                        var link = $(this).attr('data-url');
-//                        $(this).css('cursor', 'pointer');
-//
-//                        $(this).click(function () {
-//                            if ($(this).attr('data-target') != undefined && $(this).attr('data-target') == "True") {
-//                                var win = window.open(link, '_blank');
-//                                win.focus();
-//                            } else {
-//                                $(location).attr('href', link);
-//                            }
-//
-//                        });
-//                        $(this).find('.copyright').on('click', function (e) {
-//                            e.stopPropagation();
-//                        });
-//                    }
 
                 });
 
@@ -84,19 +65,6 @@
                 if (currentCaption != undefined) {
                     slider.caption.html(currentCaption);
 
-//                    if (slider.slides.eq(index).attr('data-url') != undefined && slider.slides.eq(index).attr('data-url').length != 0) {
-//                        slider.caption.css('cursor', 'pointer');
-//                        slider.caption.click(
-//                            function () {
-//                                if (slider.slides.eq(index).attr('data-target') != undefined && slider.slides.eq(index).attr('data-target') == "True") {
-//                                    var win = window.open(slider.slides.eq(index).attr('data-url'), '_blank');
-//                                    win.focus();
-//                                } else {
-//                                    $(location).attr('href', slider.slides.eq(index).attr('data-url'));
-//                                }
-//                            });
-//
-//                    }
                 }
                 else {
                     slider.caption.hide();
@@ -236,34 +204,6 @@
                var currentCopyright = slide.find('.copyright p');
                if (currentCopyright.is(':visible')) currentCopyright.hide();
 
-//                var currentCaption = slide.find('.bx-caption').html(),
-//                if (currentCaption != undefined) {
-//
-//                    slider.caption.fadeIn(function () {
-//                        if (slide.attr('data-url') != undefined && slide.attr('data-url').length != 0) {
-//                            $(this).css('cursor', 'pointer');
-//
-//                            $(this).click(function () {
-//
-//                                if (slide.attr('data-target') != undefined && slide.attr('data-target') == "True") {
-//                                    var win = window.open(slide.attr('data-url'), '_blank');
-//                                    win.focus();
-//                                } else {
-//                                    $(location).attr('href', slide.attr('data-url'));
-//                                }
-//                            });
-//                        }
-//                        else {
-//                            $(this).css('cursor', '');
-//                            $(this).unbind('click');
-//                        }
-//
-//                    }).html(slide.find('.bx-caption').html());
-//
-//                }
-//                else {
-//                    slider.caption.fadeOut(200);
-//                }
                 el.find('iframe').each(function (index) {
                     if ($(this)[0].src.indexOf('vimeo') !== -1) {
                         var player = $f($(this)[0]);

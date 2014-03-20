@@ -1,4 +1,3 @@
-/* Variable to detect mobile devices*/
 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 /* Check transition support*/
