@@ -316,6 +316,9 @@ table {
   .slider-panoramic .bx-caption {
     display: none; }
 
+  .bx-viewport {
+    z-index: 0; }
+
   .slide-container {
     z-index: -1; } }
 @media (max-width: 767px) {
@@ -525,7 +528,8 @@ table {
     font-size: 0;
     line-height: 0;
     position: absolute;
-    top: 50%; } }
+    top: 50%;
+    left: 50%; } }
 @media (max-width: 767px) {
   .slider-with-thumbs {
     width: auto !important;

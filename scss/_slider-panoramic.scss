@@ -68,9 +68,13 @@
     }
     .bx-caption { display: none; }
   }
+    .bx-viewport{
+      z-index: 0;
+    }
     .slide-container{
       z-index: -1;
     }
+     
 }
 
   @include media-query(palm) {
