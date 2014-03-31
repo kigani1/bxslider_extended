@@ -28,8 +28,9 @@
 
 
             //add preloader to slider
-                $(el).append('<div class="slider-preloader"></div>');
-
+            if(slider.settings.preloader){
+            $(el).append('<div class="slider-preloader"></div>');
+            }
 
 
 
@@ -54,9 +55,11 @@
 
 
                 });
-
-                el.find('.slider-preloader').hide();
-
+                
+                var preloader = el.find('.slider-preloader');
+                if(preloader.length){
+                    preloader.hide();
+                }
 
                 //prepend static caption container and add content
                 el.find('img').css('opacity', 1);

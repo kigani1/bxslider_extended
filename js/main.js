@@ -8,7 +8,7 @@ $(function(){
         pagerCustom: '.pager-container', // option added in bxsliderExt, create custom pager with thumbnails
         video: true,
         pause: 5000,
-
+        preloader: true, // added in bxsliderExt, set to true to display preloader
         auto: (function () {
             var bool = ($('.slider-product .slide').length > 1);
             return bool;
@@ -23,6 +23,7 @@ $(function(){
         captions: true,
         video: true,
         preloadImages: 'all',
+        preloader: true,
         pager: false
     });
 

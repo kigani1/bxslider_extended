@@ -2,6 +2,8 @@ Slider is based on bxslider
 See http://bxslider.com/
 All options of bxslider are available except onSliderLoad and onSlideBefore (they're already used in jquery.bxsliderExt.js file)
 
+Browser support: Firefox, Chrome, Safari, iOS, Android, IE8+
+
 Elements added:
 - custom caption in slider (visible in panoramic view instead of bxslider caption)
 - copyrights icon with speech balloon containing text
